@@ -271,7 +271,7 @@
       border-radius: var(--radius-pill);
       font-size: 13px;
       font-weight: 800;
-      transition: all 0.25s;
+      transition: all 0.2s;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
       white-space: nowrap;
     }
@@ -895,7 +895,7 @@
     @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
     /* ==========================================================================
-       7. SECTION 4: 15 DIFFERENT PRODUCTS COLLECTION & DETAIL POPUP
+       7. SECTION 4: 15 DIFFERENT PRODUCTS COLLECTION & CIRCLE DETAIL BUTTON
        ========================================================================== */
     .section-usecases {
       padding: 120px 0;
@@ -1006,17 +1006,17 @@
       color: var(--color-danger);
     }
     
-    /* 카드 하단 [정기구독 시작하기 (길게)] + [상세보기 (우측)] 2단 레이아웃 원본 복원 */
+    /* 카드 하단 [정기구독 시작하기 (넓은 메인 버튼)] + [동그라미 상세보기 아이콘 버튼 (우측)] */
     .prod-btn-group {
-      display: grid;
-      grid-template-columns: 1.9fr 1fr; /* 정기구독 길게 + 우측 상세보기 */
-      gap: 8px;
+      display: flex;
       align-items: center;
+      gap: 10px;
     }
     .btn-prod-subscribe {
+      flex: 1;
       background: #183D33;
       color: #FAF6EB;
-      padding: 12px 14px;
+      padding: 12px 18px;
       border-radius: var(--radius-pill);
       font-size: 13.5px;
       font-weight: 800;
@@ -1029,23 +1029,30 @@
       color: #FFFFFF;
       transform: translateY(-1px);
     }
-    .btn-prod-detail {
+    
+    /* 동그라미(Circle) 상세보기 아이콘 버튼 */
+    .btn-prod-detail-circle {
+      flex: 0 0 40px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       background: rgba(24, 61, 51, 0.06);
       color: #183D33;
       border: 1.5px solid rgba(24, 61, 51, 0.22);
-      padding: 12px 12px;
-      border-radius: var(--radius-pill);
-      font-size: 13px;
-      font-weight: 700;
-      transition: all 0.2s;
-      text-align: center;
-      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 0;
+      box-sizing: border-box;
     }
-    .btn-prod-detail:hover {
+    .btn-prod-detail-circle:hover {
       background: #183D33;
       color: #FAF6EB;
       border-color: #183D33;
-      transform: translateY(-1px);
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(24, 61, 51, 0.2);
     }
 
     /* 상품 상세 모달 (Modal Popup) */
@@ -1518,7 +1525,7 @@
     </div>
   </section>
 
-  <!-- Section 4: 15 DIFFERENT PRODUCTS COLLECTION & DETAIL POPUP -->
+  <!-- Section 4: 15 DIFFERENT PRODUCTS COLLECTION & CIRCLE DETAIL BUTTON -->
   <section id="usecases" class="section-usecases">
     <div class="container">
       <div style="text-align: center;">
@@ -1724,10 +1731,15 @@
             <span class="prod-price">${p.price} <small style="font-size: 13px; color: #7A7D84; font-weight: 400;">/월</small></span>
             <span class="prod-discount">${p.disc}</span>
           </div>
-          <!-- 정기구독 버튼 길게(좌측) + 상세보기 버튼(우측) 1.9fr : 1fr 균형 레이아웃 -->
+          <!-- 정기구독 버튼(길게) + 동그라미(Circle) 상세보기 아이콘 버튼 -->
           <div class="prod-btn-group">
             <button class="btn-prod-subscribe" onclick="location.href='#diagnosis'">정기구독 시작하기</button>
-            <button class="btn-prod-detail" onclick="openProductDetail(${p.id})">상세보기</button>
+            <button class="btn-prod-detail-circle" onclick="openProductDetail(${p.id})" title="상세보기" aria-label="상세보기">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
           </div>
         </div>
       `).join('');
