@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  background-color: #FAF6EB;
+  color: #4C4E52;
+  -webkit-font-smoothing: antialiased;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.slide-canvas {
+  width: 1200px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  border: 1px solid rgba(76, 78, 82, 0.15);
+  box-shadow: 0 10px 30px -4px rgba(24, 61, 51, 0.05);
+  padding: 44px 48px;
+  position: relative;
+  overflow: hidden;
+}
+.slide-header {
+  margin-bottom: 28px;
+}
+.slide-title {
+  font-family: 'Plus Jakarta Sans', 'Pretendard', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #183D33;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.slide-desc {
+  font-size: 14.5px;
+  color: #7A7D84;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.slide-meta {
+  font-family: 'Inter', 'Pretendard', sans-serif;
+  font-size: 11.5px;
+  color: #183D33;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  background: #EAF4EE;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  display: inline-block;
+  border: 1px solid rgba(118, 165, 140, 0.3);
+}
+.grid-box {
+  background: #FAF6EB;
+  border-radius: 18px;
+  border: 1px solid rgba(76, 78, 82, 0.12);
+  padding: 28px;
+}
+</style>
+</head>
+<body>
+
+<div class="slide-canvas">
+  <div class="slide-header">
+    <h2 class="slide-title">Button</h2>
+    <p class="slide-desc">주요 행동을 실행하는 컨트롤입니다. Size 2종 &times; Style 3종 &times; State 4종으로 총 24개 Variants를 제공합니다.</p>
+    <div class="slide-meta">PROPERTY Label &middot; VARIANTS Size / Style / State &middot; ACCESSIBILITY Focus 2px, 최소 높이 40px</div>
+  </div>
+
+  <div class="grid-box">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px;">
+      <!-- Row 1: Primary Medium (Deep Forest Green) -->
+      <button style="height: 40px; background: #183D33; color: #FAF6EB; border: none; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: pointer; box-shadow: 0 2px 8px rgba(24, 61, 51, 0.25);">버튼</button>
+      <button style="height: 40px; background: #76A58C; color: #FFFFFF; border: none; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: pointer; box-shadow: 0 4px 12px rgba(118, 165, 140, 0.35);">버튼</button>
+      <button style="height: 40px; background: #183D33; color: #FAF6EB; border: none; border-radius: 10px; font-weight: 600; font-size: 14px; outline: 2px solid #76A58C; outline-offset: 2px;">버튼</button>
+      <button style="height: 40px; background: #E2D9C8; color: #A8A193; border: none; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: not-allowed;">버튼</button>
+
+      <!-- Row 2: Secondary Medium (Charcoal Hairline) -->
+      <button style="height: 40px; background: #FFFFFF; color: #183D33; border: 1.5px solid rgba(76,78,82,0.25); border-radius: 10px; font-weight: 600; font-size: 14px; cursor: pointer;">버튼</button>
+      <button style="height: 40px; background: #EAF4EE; color: #183D33; border: 1.5px solid #76A58C; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: pointer;">버튼</button>
+      <button style="height: 40px; background: #FFFFFF; color: #183D33; border: 1.5px solid #183D33; border-radius: 10px; font-weight: 600; font-size: 14px; outline: 2px solid #76A58C; outline-offset: 2px;">버튼</button>
+      <button style="height: 40px; background: #FAF6EB; color: #D5CBBB; border: 1.5px solid rgba(76,78,82,0.12); border-radius: 10px; font-weight: 600; font-size: 14px; cursor: not-allowed;">버튼</button>
+
+      <!-- Row 3: Destructive Medium (Coral Red) -->
+      <button style="height: 40px; background: #EF4444; color: white; border: none; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: pointer; box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25);">버튼</button>
+      <button style="height: 40px; background: #DC2626; color: white; border: none; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: pointer;">버튼</button>
+      <button style="height: 40px; background: #EF4444; color: white; border: none; border-radius: 10px; font-weight: 600; font-size: 14px; outline: 2px solid #76A58C; outline-offset: 2px;">버튼</button>
+      <button style="height: 40px; background: #E2D9C8; color: #A8A193; border: none; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: not-allowed;">버튼</button>
+
+      <!-- Row 4: Primary Large -->
+      <button style="height: 48px; background: #183D33; color: #FAF6EB; border: none; border-radius: 12px; font-weight: 600; font-size: 15px; cursor: pointer; box-shadow: 0 2px 8px rgba(24, 61, 51, 0.25);">버튼</button>
+      <button style="height: 48px; background: #76A58C; color: #FFFFFF; border: none; border-radius: 12px; font-weight: 600; font-size: 15px; cursor: pointer;">버튼</button>
+      <button style="height: 48px; background: #183D33; color: #FAF6EB; border: none; border-radius: 12px; font-weight: 600; font-size: 15px; outline: 2px solid #76A58C; outline-offset: 2px;">버튼</button>
+      <button style="height: 48px; background: #E2D9C8; color: #A8A193; border: none; border-radius: 12px; font-weight: 600; font-size: 15px; cursor: not-allowed;">버튼</button>
+
+      <!-- Row 5: Secondary Large -->
+      <button style="height: 48px; background: #FFFFFF; color: #183D33; border: 1.5px solid rgba(76,78,82,0.25); border-radius: 12px; font-weight: 600; font-size: 15px; cursor: pointer;">버튼</button>
+      <button style="height: 48px; background: #EAF4EE; color: #183D33; border: 1.5px solid #76A58C; border-radius: 12px; font-weight: 600; font-size: 15px; cursor: pointer;">버튼</button>
+      <button style="height: 48px; background: #FFFFFF; color: #183D33; border: 1.5px solid #183D33; border-radius: 12px; font-weight: 600; font-size: 15px; outline: 2px solid #76A58C; outline-offset: 2px;">버튼</button>
+      <button style="height: 48px; background: #FAF6EB; color: #D5CBBB; border: 1.5px solid rgba(76,78,82,0.12); border-radius: 12px; font-weight: 600; font-size: 15px; cursor: not-allowed;">버튼</button>
+
+      <!-- Row 6: Destructive Large -->
+      <button style="height: 48px; background: #EF4444; color: white; border: none; border-radius: 12px; font-weight: 600; font-size: 15px; cursor: pointer; box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25);">버튼</button>
+      <button style="height: 48px; background: #DC2626; color: white; border: none; border-radius: 12px; font-weight: 600; font-size: 15px; cursor: pointer;">버튼</button>
+      <button style="height: 48px; background: #EF4444; color: white; border: none; border-radius: 12px; font-weight: 600; font-size: 15px; outline: 2px solid #76A58C; outline-offset: 2px;">버튼</button>
+      <button style="height: 48px; background: #E2D9C8; color: #A8A193; border: none; border-radius: 12px; font-weight: 600; font-size: 15px; cursor: not-allowed;">버튼</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Pretendard', sans-serif;
+  background: #0F241F;
+  color: #FAF6EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.bg-glow-1 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(118, 165, 140, 0.22) 0%, rgba(118, 165, 140, 0) 70%);
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.bg-glow-2 {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(24, 61, 51, 0.5) 0%, transparent 70%);
+  bottom: -50px;
+  right: 15%;
+  pointer-events: none;
+}
+.grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(250, 246, 235, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(250, 246, 235, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+.container {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  max-width: 900px;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(118, 165, 140, 0.15);
+  border: 1px solid rgba(118, 165, 140, 0.4);
+  border-radius: 9999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #A4D1B8;
+  letter-spacing: 0.08em;
+  margin-bottom: 32px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(118, 165, 140, 0.2);
+}
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #76A58C;
+  box-shadow: 0 0 8px #76A58C;
+}
+.title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+  background: linear-gradient(180deg, #FAF6EB 0%, #D1DEC9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.title span {
+  display: block;
+  font-size: 60px;
+}
+.desc {
+  font-size: 16.5px;
+  color: #A4D1B8;
+  font-weight: 500;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.sub-scope {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: rgba(250, 246, 235, 0.7);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 36px;
+}
+.divider {
+  width: 280px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(250, 246, 235, 0.2), transparent);
+  margin: 0 auto 36px auto;
+}
+.footer-tags {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(250, 246, 235, 0.6);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+<div class="bg-glow-1"></div>
+<div class="bg-glow-2"></div>
+<div class="grid-lines"></div>
+<div class="container">
+  <div class="badge">
+    <span class="badge-dot"></span>
+    URBAN WELLNESS &middot; DESIGN SYSTEM VERSION 2.0 (FINAL)
+  </div>
+  <h1 class="title">
+    AI ACE CBT
+    <span>Learning UI Kit</span>
+  </h1>
+  <p class="desc">어반 웰니스 6대 브랜드 컬러 기반 시험 학습 경험 디자인 시스템</p>
+  <p class="sub-scope">Foundations &middot; Components &middot; Quiz States &middot; Responsive Templates</p>
+  <div class="divider"></div>
+  <div class="footer-tags">
+    Figma Variables &nbsp;&middot;&nbsp; Auto Layout &nbsp;&middot;&nbsp; Light / Dark &nbsp;&middot;&nbsp; Web Responsive
+  </div>
+</div>
+</body>
+</html>

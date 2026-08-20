@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  background-color: #FAF6EB;
+  color: #4C4E52;
+  -webkit-font-smoothing: antialiased;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.slide-canvas {
+  width: 1200px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  border: 1px solid rgba(76, 78, 82, 0.15);
+  box-shadow: 0 10px 30px -4px rgba(24, 61, 51, 0.05);
+  padding: 44px 48px;
+  position: relative;
+  overflow: hidden;
+}
+.slide-header {
+  margin-bottom: 28px;
+}
+.slide-title {
+  font-family: 'Plus Jakarta Sans', 'Pretendard', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #183D33;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.slide-desc {
+  font-size: 14.5px;
+  color: #7A7D84;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.slide-meta {
+  font-family: 'Inter', 'Pretendard', sans-serif;
+  font-size: 11.5px;
+  color: #183D33;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  background: #EAF4EE;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  display: inline-block;
+  border: 1px solid rgba(118, 165, 140, 0.3);
+}
+.grid-box {
+  background: #FAF6EB;
+  border-radius: 18px;
+  border: 1px solid rgba(76, 78, 82, 0.12);
+  padding: 28px;
+}
+</style>
+</head>
+<body>
+
+<div class="slide-canvas">
+  <div class="slide-header">
+    <h2 class="slide-title">Colors</h2>
+    <p class="slide-desc">Primitives는 6대 브랜드 원시 팔레트이고, Semantic Color는 실제 UI 역할을 나타냅니다. 컴포넌트에는 Semantic Color만 사용합니다.</p>
+  </div>
+  
+  <div style="margin-bottom: 32px;">
+    <h4 style="font-size: 13px; font-weight: 700; color: #183D33; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 14px;">Primitives &middot; 6 Brand Palette</h4>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;">
+      <!-- Row 1: Deep Green, Cream, Sage, Walnut, Charcoal -->
+      <div style="background: #183D33; border-radius: 10px; padding: 14px; color: #FAF6EB;"><div style="font-weight: 700; font-size: 12px;">deep-green/primary</div><div style="font-size: 10px; opacity: 0.8;">#183D33 (메인 브랜드)</div></div>
+      <div style="background: #FAF6EB; border: 1.5px solid #D5CBBB; border-radius: 10px; padding: 14px; color: #183D33;"><div style="font-weight: 700; font-size: 12px;">cream-white/bg</div><div style="font-size: 10px; opacity: 0.8;">#FAF6EB (기본 배경)</div></div>
+      <div style="background: #76A58C; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 12px;">sage-green/accent</div><div style="font-size: 10px; opacity: 0.8;">#76A58C (핵심 CTA)</div></div>
+      <div style="background: #503323; border-radius: 10px; padding: 14px; color: #FAF6EB;"><div style="font-weight: 700; font-size: 12px;">dark-walnut/natural</div><div style="font-size: 10px; opacity: 0.8;">#503323 (우드 포인트)</div></div>
+      <div style="background: #4C4E52; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 12px;">charcoal/grid-text</div><div style="font-size: 10px; opacity: 0.8;">#4C4E52 (본문&보더)</div></div>
+      
+      <!-- Row 2: Urban Navy & Tints -->
+      <div style="background: #2A3C5A; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 12px;">dark-navy/urban</div><div style="font-size: 10px; opacity: 0.8;">#2A3C5A (B2B/비즈니스)</div></div>
+      <div style="background: #EAF4EE; border: 1px solid #C4DFCE; border-radius: 10px; padding: 14px; color: #183D33;"><div style="font-weight: 700; font-size: 12px;">sage/100</div><div style="font-size: 10px; opacity: 0.8;">var(--ace-sage-100)</div></div>
+      <div style="background: #F4EFE2; border: 1px solid #E2D9C8; border-radius: 10px; padding: 14px; color: #183D33;"><div style="font-weight: 700; font-size: 12px;">cream/subtle</div><div style="font-size: 10px; opacity: 0.8;">var(--ace-cream-subtle)</div></div>
+      <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 14px; color: #183D33;"><div style="font-weight: 700; font-size: 12px;">white/pure</div><div style="font-size: 10px; opacity: 0.8;">#FFFFFF (카드 서피스)</div></div>
+      <div style="background: #090D16; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 12px;">black/1000</div><div style="font-size: 10px; opacity: 0.8;">#090D16 (다크 베이스)</div></div>
+
+      <!-- Supporting Status -->
+      <div style="background: #10B981; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 12px;">mint/success</div><div style="font-size: 10px; opacity: 0.8;">#10B981 (정답/통과)</div></div>
+      <div style="background: #ECFDF5; border-radius: 10px; padding: 14px; color: #065F46;"><div style="font-weight: 700; font-size: 12px;">mint/bg-subtle</div><div style="font-size: 10px; opacity: 0.8;">#ECFDF5 (정답 배경)</div></div>
+      <div style="background: #F59E0B; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 12px;">amber/warning</div><div style="font-size: 10px; opacity: 0.8;">#F59E0B (검토/경고)</div></div>
+      <div style="background: #EF4444; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 12px;">red/danger</div><div style="font-size: 10px; opacity: 0.8;">#EF4444 (오답/위험)</div></div>
+      <div style="background: #FEF2F2; border-radius: 10px; padding: 14px; color: #991B1B;"><div style="font-weight: 700; font-size: 12px;">red/bg-subtle</div><div style="font-size: 10px; opacity: 0.8;">#FEF2F2 (오답 배경)</div></div>
+    </div>
+  </div>
+
+  <div>
+    <h4 style="font-size: 13px; font-weight: 700; color: #183D33; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 14px;">Semantic Color &middot; Wellness Tokens</h4>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;">
+      <div style="background: #FAF6EB; border: 1px solid #D5CBBB; border-radius: 10px; padding: 14px; color: #183D33;"><div style="font-weight: 700; font-size: 11px;">color/bg/canvas</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-color-bg-canvas)</div></div>
+      <div style="background: #FFFFFF; border: 1px solid rgba(76,78,82,0.15); border-radius: 10px; padding: 14px; color: #183D33;"><div style="font-weight: 700; font-size: 11px;">color/bg/surface</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-color-bg-surface)</div></div>
+      <div style="background: #F4EFE2; border-radius: 10px; padding: 14px; color: #183D33;"><div style="font-weight: 700; font-size: 11px;">color/bg/subtle</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-color-bg-subtle)</div></div>
+      <div style="background: #183D33; border-radius: 10px; padding: 14px; color: #FAF6EB;"><div style="font-weight: 700; font-size: 11px;">color/bg/brand</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-color-bg-brand)</div></div>
+      <div style="background: #76A58C; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 11px;">color/bg/accent-cta</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-color-bg-accent)</div></div>
+
+      <div style="background: #0F241F; border-radius: 10px; padding: 14px; color: #FAF6EB;"><div style="font-weight: 700; font-size: 11px;">color/bg/inverse</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-color-bg-inverse)</div></div>
+      <div style="background: rgba(76,78,82,0.15); border-radius: 10px; padding: 14px; color: #183D33;"><div style="font-weight: 700; font-size: 11px;">color/border/hairline</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-border-hairline)</div></div>
+      <div style="background: #4C4E52; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 11px;">color/border/strong</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-border-strong)</div></div>
+      <div style="background: #183D33; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 11px;">color/border/brand</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-border-brand)</div></div>
+      <div style="background: #76A58C; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 11px;">color/border/focus</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-border-focus)</div></div>
+
+      <div style="background: #183D33; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 11px;">color/text/primary</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-text-primary)</div></div>
+      <div style="background: #4C4E52; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 11px;">color/text/body</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-text-body)</div></div>
+      <div style="background: #83878E; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 11px;">color/text/muted</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-text-muted)</div></div>
+      <div style="background: #76A58C; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 11px;">color/text/accent</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-text-accent)</div></div>
+      <div style="background: #FAF6EB; border: 1px solid #D5CBBB; border-radius: 10px; padding: 14px; color: #183D33;"><div style="font-weight: 700; font-size: 11px;">color/text/on-brand</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-text-on-brand)</div></div>
+
+      <div style="background: #EAF4EE; border-radius: 10px; padding: 14px; color: #183D33;"><div style="font-weight: 700; font-size: 11px;">color/bg/selected</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-bg-selected)</div></div>
+      <div style="background: #ECFDF5; border-radius: 10px; padding: 14px; color: #047857;"><div style="font-weight: 700; font-size: 11px;">color/bg/success</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-bg-success)</div></div>
+      <div style="background: #FEF2F2; border-radius: 10px; padding: 14px; color: #B91C1C;"><div style="font-weight: 700; font-size: 11px;">color/bg/danger</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-bg-danger)</div></div>
+      <div style="background: #503323; border-radius: 10px; padding: 14px; color: #FAF6EB;"><div style="font-weight: 700; font-size: 11px;">color/bg/natural</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-bg-natural)</div></div>
+      <div style="background: #2A3C5A; border-radius: 10px; padding: 14px; color: #FFFFFF;"><div style="font-weight: 700; font-size: 11px;">color/bg/urban</div><div style="font-size: 9.5px; opacity: 0.8;">var(--ace-bg-urban)</div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
